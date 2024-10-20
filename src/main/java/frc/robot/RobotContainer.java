@@ -36,15 +36,15 @@ public class RobotContainer {
 
     private final SwerveSubsystem swerveSubsystem = new SwerveSubsystem();
 
-    private final Joystick driverJoystick = new Joystick(OIConstants.kDriverControllerPort);
+    private final Joystick driverJoystick = new Joystick(Constants.OIConstants.kDriverControllerPort);
 
     public RobotContainer() {
         swerveSubsystem.setDefaultCommand(new SwerveJoystickCmd(
                 swerveSubsystem,
-                () -> -driverJoystick.getRawAxis(OIConstants.kDriverYAxis),
-                () -> driverJoystick.getRawAxis(OIConstants.kDriverXAxis),
-                () -> driverJoystick.getRawAxis(OIConstants.kDriverRotAxis),
-                () -> !driverJoystick.getRawButton(OIConstants.kDriveFieldOrientedButtonIdx)));
+                () -> -driverJoystick.getRawAxis(Constants.OIConstants.kDriverYAxis),
+                () -> driverJoystick.getRawAxis(Constants.OIConstants.kDriverXAxis),
+                () -> driverJoystick.getRawAxis(Constants.OIConstants.kDriverRotAxis),
+                () -> !driverJoystick.getRawButton(Constants.OIConstants.kDriverFieldOrientedButtonIdx)));
         configureButtonBindings();
     }
 
