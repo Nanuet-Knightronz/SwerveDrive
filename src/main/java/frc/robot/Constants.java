@@ -27,6 +27,8 @@ public final class Constants {
          public static final double kPTurning = 0.5;
      };
 
+public static final class DriveConstants {}
+
 //    {
 //        public static class OperatorConstants {
 //            public static final int DRIVER_CONTROLLER_PORT = 0;
