@@ -3,6 +3,7 @@ package frc.robot.subsystems;
 import com.revrobotics.CANEncoder;
 import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.math.geometry.Rotation2d;
+import edu.wpi.first.math.kinematics.SwerveModulePosition;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
 import edu.wpi.first.wpilibj.AnalogInput;
 import com.revrobotics.CANSparkMax;
@@ -52,6 +53,11 @@ public class SwerveModule {
         turningPIDController.enableContinuousInput( -Math.PI, Math.PI);
 
         resetEncoders();
+    }
+
+    public SwerveModulePosition getPosition() {
+        // Use drive position for distance and turning position for angle
+        return new SwerveModulePosition(getDrivePosition(), new Rotation2d(getTurningPosition()));
     }
 
     public double getDrivePosition() {
