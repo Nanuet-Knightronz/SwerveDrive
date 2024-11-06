@@ -112,7 +112,7 @@ public static final class DriveConstants {
         public static final int kDriverRotAxis = 4;
         public static final int kDriverFieldOrientedButtonIdx = 1;
 
-        public static final double kDeadband = 0.2;
+        public static final double kDeadband = 0.05;
         public static double kDeadBand;
     }
-}   
+}
